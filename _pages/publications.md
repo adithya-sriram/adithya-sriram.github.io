@@ -5,12 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+## Publications
 
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+1. *Attoomolar detection of ss-DNA without amplification and capture of long target sequences with graphene biosensors.* <br> R. Vishnubhotla, **A. Sriram**, O. O. Dickens, S. V. Mandyam, J. Ping, E. Adu-Beng, A. T. C. Johnson. <br> [<a href="https://ieeexplore.ieee.org/ielaam/7361/9086908/8998161-aam.pdf" target="_blank">IEEE Sensors</a>]
