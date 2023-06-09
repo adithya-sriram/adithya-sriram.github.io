@@ -5,8 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-## Publications
-
 1. *Light-induced control of magnetic phases in Kitaev quantum magnets.* <br>
 **A. Sriram**, M. Claassen. <br>
 [<a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.L032036" target="_blank">Physical Review Research</a>]
