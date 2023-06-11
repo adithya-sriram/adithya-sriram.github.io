@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-1.*Topology, criticality, and dynamically generated qubits in a stochastic measurement-only Kitaev model.* <br>
+1. *Topology, criticality, and dynamically generated qubits in a stochastic measurement-only Kitaev model.* <br>
 **A. Sriram**, T. Rakovszky, V. Khemani, M. Ippoliti. <br>
 [<a href="https://arxiv.org/abs/2207.07096" target="_blank">arXiv (2022)</a>]
 
