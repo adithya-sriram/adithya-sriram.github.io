@@ -36,15 +36,21 @@ $Z = 6 e^{-\beta J}+2 e^{3 \beta  J}$
 
 However, can we do the same thing as before? 
 
-$Z = \sum_{S_0}\sum_{S_1}\sum_{S_2}\langle S_0| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}| S_1\rangle \langle S_1| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}|S_2 \rangle \langle S_2| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}| S_0 \rangle$.
+```math
+Z = \sum_{S_0}\sum_{S_1}\sum_{S_2}\langle S_0| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}| S_1\rangle \langle S_1| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}|S_2 \rangle \langle S_2| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}| S_0 \rangle.
+```
 
 Notice that if we carry out the sum over $S_1$, we get $\sum_{S_1}|S_1\rangle\langle S_1| = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$, which is the identity matrix. The same thing occurs for $S_2$. We can simplify the partition function then to
 
-$Z = \sum_{S_0}\langle S_0| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix} ^ 2| S_0 \rangle = Tr \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix} ^ 2 = 6 e^{-\beta J}+2 e^{3 \beta  J}$.
+```math
+Z = \sum_{S_0}\langle S_0| \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix} ^ 2| S_0 \rangle = Tr \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix} ^ 2 = 6 e^{-\beta J}+2 e^{3 \beta  J}.
+```
 
 It agrees with the direct summation. This should work for any $N$ spins. The matrix that we introduced is called a transfer matrix. The reason this can be done this way is because every spin is contained between only two terms in the Hamiltonian, and so the sum over any given spin can be re-written as a repeated index summation on a product of matrices. The transfer matrix between spins $i,i+1$ is
 
-$T = \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}$. 
+```math
+T = \begin{pmatrix} e^{\beta J} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix}.
+``` 
 
 It defines all possible interaction terms in the partition function between the two spins. 
 
@@ -62,21 +68,29 @@ $Z = \sum_{S_0}\sum_{S_1}e^{\beta hS_0 + \beta h S_1}  =e^{\beta h + \beta h} + 
 
 To write this in bra-ket notation with a matrix as before, we can do
 
-$Z = \sum_{S_0}\sum_{S_1} \langle S_0| \begin{pmatrix} e^{2\beta h} & 0 \\ 0 & e^{-2\beta h} \end{pmatrix} |S_1 \rangle$.
+```math
+Z = \sum_{S_0}\sum_{S_1} \langle S_0| \begin{pmatrix} e^{2\beta h} & 0 \\ 0 & e^{-2\beta h} \end{pmatrix} |S_1 \rangle.
+```
 
 Combining this with the Ising interaction transfer matrix we get
 
-$T= \begin{pmatrix} e^{\beta J + 2\beta h} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J - 2\beta h} \end{pmatrix}$.
+```math
+T= \begin{pmatrix} e^{\beta J + 2\beta h} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J - 2\beta h} \end{pmatrix}.
+```
 
 Again this comes from considering the terms in the partition function which correspond to the particular spin configurations. The top-left is when both spins are pointed upwards, top right, when $S_0$ is up and $S_1$ is down, and so on. As expected, summing the matrix elements of this, yields the correct partition function $N = 2$.
 
 However, one has to be careful when going beyond two spins. The reason is, $T$ encapsulates all the terms in the Hamiltonian corresponding to $S_i,S_{i+1}$. However, the field interaction term for $S_{i+1}$ will appear in $T_{i,i+1},\ T_{i+1,i+2}$, naively multiplying $T$ repeatedly to get the full partition function will cause us to double count. The solution to this is to separate out the field interaction terms by writing $T$ as a matrix product.
 
-$T = T_H T_J T_H = \begin{pmatrix} e^{\beta h} & 0 \\ 0 & e^{-\beta h} \end{pmatrix} \begin{pmatrix} e^{\beta J } & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix} \begin{pmatrix} e^{\beta h} & 0 \\ 0 & e^{-\beta h} \end{pmatrix}$.
+```math
+T = T_H T_J T_H = \begin{pmatrix} e^{\beta h} & 0 \\ 0 & e^{-\beta h} \end{pmatrix} \begin{pmatrix} e^{\beta J } & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J} \end{pmatrix} \begin{pmatrix} e^{\beta h} & 0 \\ 0 & e^{-\beta h} \end{pmatrix}.
+```
 
 Then, what we can do is write a modified transfer matrix that has $T_H \to T_H^{1/2}$ such that upon repeated multiplication, we will only pick up one factor of $T_H$ per spin.
 
-$T' =T_H^{1/2} T_J T_H^{1/2}=\begin{pmatrix} e^{\beta J + \beta h} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J - \beta h} \end{pmatrix}$.
+```math
+T' =T_H^{1/2} T_J T_H^{1/2}=\begin{pmatrix} e^{\beta J + \beta h} & e^{-\beta J} \\ e^{-\beta J} & e^{\beta J - \beta h} \end{pmatrix}.
+```
 
 Now, our full partition function for $N$ spins can be written as 
 
@@ -116,7 +130,9 @@ $\langle S_1 \rangle= \frac{\sum_{S_0} \sum_{S_1} \sum_{S_2} \langle S_0|T' S_1 
 
 This sort of looks like a spin operator acting on a state. In fact, now when we perform the summation over $S_1$, we get
 
-$\sum_{S_1}S_1|S_1\rangle \langle S_1| = +1 \begin{pmatrix} 1 & 0\\ 0 & 0 \end{pmatrix} -1 \begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} = S^z$. 
+```math
+\sum_{S_1}S_1|S_1\rangle \langle S_1| = +1 \begin{pmatrix} 1 & 0\\ 0 & 0 \end{pmatrix} -1 \begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} = S^z.
+``` 
 
 Evidently, the expectation value of $S_1$ can be expressed simply through inserting an $S^z$ into the appropriate slot in the product in the numerator. We have then, for an $N$ spin system,
 
@@ -128,37 +144,47 @@ $\langle S_i S_j\rangle=\frac{\sum_{S_0}\langle S_0|T'^{i-1} S^z_i T'^{j- i }S^z
 
 Suppose we now wanted to actually calculate one of these quantities. Let's look at the correlation length. We know that due to translation symmetry, every one of the transfer matrices are the same. The transfer matrices are diagonalizable and therefore there are unitary operations which rotate the transfer matrices into their eigenbasis. These unitary operators are of course the matrix of eigenvectors of $T'$.We can rewrite the trace using
 
-$Tr[UU^{-1}TUU^{-1}T...TUU^{-1} S^z UU^{-1} T'...T'UU^{-1} S^z UU^{-1} T...TUU^{-1}  ] = Tr[U\begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix}U^{-1}S^zU \begin{pmatrix} \lambda_+^{j-i} & 0 \\ 0 & \lambda_-^{j-i} \end{pmatrix}U^{-1}S^zU\begin{pmatrix} \lambda_+^{N-j+1} & 0 \\ 0 & \lambda_-^{N-j+1} \end{pmatrix}U^{-1}]$.
+```math
+Tr[UU^{-1}TUU^{-1}T...TUU^{-1} S^z UU^{-1} T'...T'UU^{-1} S^z UU^{-1} T...TUU^{-1}  ] = Tr[U\begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix}U^{-1}S^zU \begin{pmatrix} \lambda_+^{j-i} & 0 \\ 0 & \lambda_-^{j-i} \end{pmatrix}U^{-1}S^zU\begin{pmatrix} \lambda_+^{N-j+1} & 0 \\ 0 & \lambda_-^{N-j+1} \end{pmatrix}U^{-1}].
+```
 
 What is the matrix $U$?
 
-$U = \begin{pmatrix} -\frac{1}{2} e^{\beta  (-h)} \sqrt{4 e^{2 \beta  h}-2 e^{2 \beta  h+4 \
+```math
+U = \begin{pmatrix} -\frac{1}{2} e^{\beta  (-h)} \sqrt{4 e^{2 \beta  h}-2 e^{2 \beta  h+4 \
 \beta  J}+e^{4 \beta  h+4 \beta  J}+e^{4 \beta  J}}-\frac{1}{2} e^{2 \
 \beta  J-\beta  h}+\frac{1}{2} e^{\beta  h+2 \beta  J} & \frac{1}{2} e^{\beta  (-h)} \sqrt{4 e^{2 \beta  h}-2 e^{2 \beta  h+4 \
 \beta  J}+e^{4 \beta  h+4 \beta  J}+e^{4 \beta  J}}-\frac{1}{2} e^{2 \
-\beta  J-\beta  h}+\frac{1}{2} e^{\beta  h+2 \beta  J} \\ 1 & 1 \end{pmatrix}$
+\beta  J-\beta  h}+\frac{1}{2} e^{\beta  h+2 \beta  J} \\ 1 & 1 \end{pmatrix}.
+```
 
 Of course, since this is a unitary matrix, it can be written in the form
 
-$U = \begin{pmatrix} e^{i(\alpha -\beta / 2 -\delta / 2)}\cos \frac{\gamma}{2} &   -e^{i(\alpha -\beta / 2 +\delta / 2)}\sin \frac{\gamma}{2} \\ e^{i(\alpha +\beta / 2 -\delta / 2)}\sin \frac{\gamma}{2} & e^{i(\alpha +\beta / 2 +\delta / 2)}\cos \frac{\gamma}{2} \end{pmatrix}$.
+```math
+U = \begin{pmatrix} e^{i(\alpha -\beta / 2 -\delta / 2)}\cos \frac{\gamma}{2} &   -e^{i(\alpha -\beta / 2 +\delta / 2)}\sin \frac{\gamma}{2} \\ e^{i(\alpha +\beta / 2 -\delta / 2)}\sin \frac{\gamma}{2} & e^{i(\alpha +\beta / 2 +\delta / 2)}\cos \frac{\gamma}{2} \end{pmatrix}.
+```
 
 This has the inverse:
 
-$U^{-1} = \begin{pmatrix} e^{-\frac{1}{2} i (2 \alpha \
+```math
+U^{-1} = \begin{pmatrix} e^{-\frac{1}{2} i (2 \alpha \
 -\beta -\delta )}\cos \frac{\gamma }{2}  &e^{-\frac{1}{2} i (2 \alpha +\beta -\delta )} \sin \frac{\gamma }{2} \
  \\
  -e^{-\frac{1}{2} i (2 \
-\alpha -\beta +\delta )} \sin \frac{\gamma }{2} & e^{-\frac{1}{2} i (2 \alpha +\beta +\delta )}  \cos \frac{\gamma }{2} \end{pmatrix}$
+\alpha -\beta +\delta )} \sin \frac{\gamma }{2} & e^{-\frac{1}{2} i (2 \alpha +\beta +\delta )}  \cos \frac{\gamma }{2} \end{pmatrix}
+```
  
  The trace becomes
  
- $Tr[\begin{pmatrix} e^{i(\alpha -\beta / 2 -\delta / 2)}\cos \frac{\gamma}{2} &   -e^{i(\alpha -\beta / 2 +\delta / 2)}\sin \frac{\gamma}{2} \\ e^{i(\alpha +\beta / 2 -\delta / 2)}\sin \frac{\gamma}{2} & e^{i(\alpha +\beta / 2 +\delta / 2)}\cos \frac{\gamma}{2} \end{pmatrix}\begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
+ ```math
+Tr[\begin{pmatrix} e^{i(\alpha -\beta / 2 -\delta / 2)}\cos \frac{\gamma}{2} &   -e^{i(\alpha -\beta / 2 +\delta / 2)}\sin \frac{\gamma}{2} \\ e^{i(\alpha +\beta / 2 -\delta / 2)}\sin \frac{\gamma}{2} & e^{i(\alpha +\beta / 2 +\delta / 2)}\cos \frac{\gamma}{2} \end{pmatrix}\begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
  -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma ) \end{pmatrix} \begin{pmatrix} \lambda_+^{j-i} & 0 \\ 0 & \lambda_-^{j-i} \end{pmatrix}\begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
  -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma )\end{pmatrix} \begin{pmatrix} \lambda_+^{N-j+1} & 0 \\ 0 & \lambda_-^{N-j+1} \end{pmatrix}\begin{pmatrix} e^{-\frac{1}{2} i (2 \alpha \
 -\beta -\delta )}\cos \frac{\gamma }{2}  &e^{-\frac{1}{2} i (2 \alpha +\beta -\delta )} \sin \frac{\gamma }{2} \
  \\
  -e^{-\frac{1}{2} i (2 \
-\alpha -\beta +\delta )} \sin \frac{\gamma }{2} & e^{-\frac{1}{2} i (2 \alpha +\beta +\delta )}  \cos \frac{\gamma }{2} \end{pmatrix}]$.
+\alpha -\beta +\delta )} \sin \frac{\gamma }{2} & e^{-\frac{1}{2} i (2 \alpha +\beta +\delta )}  \cos \frac{\gamma }{2} \end{pmatrix}].
+```
  
 This looks terrible but we can make a few inroads though. Due to the cyclic property of the trace, we can write
 
@@ -166,23 +192,29 @@ $Tr[UT_r'^{i-1}U^{-1}S^zUT_r'^{j-i}U^{-1}S^zUT_r'^{N-j+1}U^{-1}] = Tr[U^{-1}UT_r
 
 Written out using matrices, we have
 
- $Tr[\begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
+ ```math
+Tr[\begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
  -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma ) \end{pmatrix} \begin{pmatrix} \lambda_+^{j-i} & 0 \\ 0 & \lambda_-^{j-i} \end{pmatrix}\begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
- -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma )\end{pmatrix} \begin{pmatrix} \lambda_+^{N-j+1} & 0 \\ 0 & \lambda_-^{N-j+1} \end{pmatrix}]$.
+ -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma )\end{pmatrix} \begin{pmatrix} \lambda_+^{N-j+1} & 0 \\ 0 & \lambda_-^{N-j+1} \end{pmatrix}].
+```
  
 Again using the cyclic trace property:
 
-$Tr[\begin{pmatrix} \lambda_+^{N-j + i} & 0 \\ 0 & \lambda_-^{N-j + i} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
+```math
+Tr[\begin{pmatrix} \lambda_+^{N-j + i} & 0 \\ 0 & \lambda_-^{N-j + i} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
  -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma ) \end{pmatrix} \begin{pmatrix} \lambda_+^{j-i} & 0 \\ 0 & \lambda_-^{j-i} \end{pmatrix}\begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
- -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma )\end{pmatrix} ]$.
+ -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma )\end{pmatrix} ].
+```
 
 Now we can carry out the matrix multiplication.
 
-$Tr[\begin{pmatrix}\lambda _+^N (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _-^{j-i} \lambda _+^{i-j}) & e^{i \delta } \sin (\gamma ) \cos \
+```math
+Tr[\begin{pmatrix}\lambda _+^N (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _-^{j-i} \lambda _+^{i-j}) & e^{i \delta } \sin (\gamma ) \cos \
 (\gamma ) \lambda _+^N (\lambda _+^{i-j} \lambda_-^{j-i}-1 \\
  e^{-i \delta } \sin (\gamma ) \cos (\gamma ) \lambda _ -^N \
 (1-\lambda _+^{j-i} \lambda _-^{i-j}) & \lambda _-^N \
-(\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _+^{j-i} \lambda _-^{i-j}) \end{pmatrix}]$
+(\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _+^{j-i} \lambda _-^{i-j}) \end{pmatrix}]
+```
 
 $= \lambda _+^N (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _-^{j-i} \lambda _+^{i-j}) + \lambda _-^N \
 (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _+^{j-i} \lambda _-^{i-j}) =\cos ^2(\gamma )(\lambda_+^N + \lambda_-^N) + \sin ^2(\gamma )\left( \lambda_+^N\left(  \frac{\lambda_+}{\lambda_-}\right)^{i-j}+\lambda_-^N\left(  \frac{\lambda_+}{\lambda_-}\right)^{j-i} \right)$.
@@ -263,9 +295,11 @@ $\langle m \rangle =\langle \sum_i S_i \rangle$.
 
 Using the partition function,
 
-$\langle m \rangle =  \frac{\sum_{S_0} \sum_{S_1} ... \sum_{S_i} ... \left(\sum_i S_i \right) e^{\beta J \sum_{j}S_j S_{j+1} + \beta h \sum_j S_j}}{Z} = \frac{\sum_i \langle S_i \rangle}{Z} = \frac{\sum_i Tr \left[ \begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
+```math
+\langle m \rangle =  \frac{\sum_{S_0} \sum_{S_1} ... \sum_{S_i} ... \left(\sum_i S_i \right) e^{\beta J \sum_{j}S_j S_{j+1} + \beta h \sum_j S_j}}{Z} = \frac{\sum_i \langle S_i \rangle}{Z} = \frac{\sum_i Tr \left[ \begin{pmatrix} \lambda_+^{i-1} & 0 \\ 0 & \lambda_-^{i-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
  -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma ) \end{pmatrix} \begin{pmatrix} \lambda_+^{N-i} & 0 \\ 0 & \lambda_-^{N-i} \end{pmatrix}\right]}{Z}=\frac{\sum_i Tr \left[ \begin{pmatrix} \lambda_+^{N-1} & 0 \\ 0 & \lambda_-^{N-1} \end{pmatrix} \begin{pmatrix} \cos (\gamma ) & -e^{i \delta } \sin (\gamma ) \\
- -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma ) \end{pmatrix} \right]}{Z}$
+ -e^{-i \delta } \sin (\gamma ) & -\cos (\gamma ) \end{pmatrix} \right]}{Z}
+```
  
  $= \frac{\sum_i (\lambda_+^{N-1} + \lambda_-^{N-1})\cos \gamma}{Z} = \frac{N(\lambda_+^{N-1} + \lambda_-^{N-1})\cos \gamma}{Z} = \frac{N(\lambda_+^{N-1} + \lambda_-^{N-1})\cos \gamma}{\lambda_+^N + \lambda_-^N}$.
  
