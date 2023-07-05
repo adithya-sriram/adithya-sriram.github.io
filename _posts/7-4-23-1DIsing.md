@@ -235,7 +235,7 @@ Let's examine the behavior of the eigenvalues as $N \to \infty$.
 
 
 
-![1DIsingEigs](../images/1disingeigs.png)
+![1DIsingEigs](/images/Screen Shot 2023-07-04 at 8.40.25 PM.png)
 
 Evidently, only the largest eigenvalue matters. This allows us to simplify the trace above. 
 
