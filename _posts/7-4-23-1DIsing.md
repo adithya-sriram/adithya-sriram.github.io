@@ -216,8 +216,10 @@ Tr[\begin{pmatrix}\lambda _+^N (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _-^{j-
 (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _+^{j-i} \lambda _-^{i-j}) \end{pmatrix}]
 ```
 
-$= \lambda _+^N (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _-^{j-i} \lambda _+^{i-j}) + \lambda _-^N \
-(\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _+^{j-i} \lambda _-^{i-j}) =\cos ^2(\gamma )(\lambda_+^N + \lambda_-^N) + \sin ^2(\gamma )\left( \lambda_+^N\left(  \frac{\lambda_+}{\lambda_-}\right)^{i-j}+\lambda_-^N\left(  \frac{\lambda_+}{\lambda_-}\right)^{j-i} \right)$.
+```math
+= \lambda _+^N (\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _-^{j-i} \lambda _+^{i-j}) + \lambda _-^N \
+(\cos ^2(\gamma )+\sin ^2(\gamma ) \lambda _+^{j-i} \lambda _-^{i-j}) =\cos ^2(\gamma )(\lambda_+^N + \lambda_-^N) + \sin ^2(\gamma )\left( \lambda_+^N\left(  \frac{\lambda_+}{\lambda_-}\right)^{i-j}+\lambda_-^N\left(  \frac{\lambda_+}{\lambda_-}\right)^{j-i} \right).
+```
 
 There we go. Then finally, we can write the spin-spin correlation function as
 
@@ -233,7 +235,7 @@ Let's examine the behavior of the eigenvalues as $N \to \infty$.
 
 
 
-![Screen Shot 2023-07-01 at 2.23.05 PM.png](:/e088a92993c148c990a2b6a4ef0b7188)
+![1DIsingEigs](../images/1disingeigs.png)
 
 Evidently, only the largest eigenvalue matters. This allows us to simplify the trace above. 
 
