@@ -1,11 +1,8 @@
 ---
-title: 'Blog Post number 1'
-date: 2012-08-14
-permalink: /posts/2012/08/blog-post-1/
-tags:
-  - cool posts
-  - category1
-  - category2
+title: '1D Ising Model Solution'
+date: 2023-07-04
+permalink: /posts/2023/07/1D Ising Model/
+
 ---
 
 Famously, the 1D Ising model has no phase transition when varying a magnetic field in the parallel direction. Here we will show how that is analytically derived, and develop some mathematical techniques along the way.
