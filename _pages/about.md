@@ -47,8 +47,8 @@ Lekkas, D. Brisson, A. T. C. Johnson. <br> [<a href="https://iopscience.iop.org/
 I like to  <a href="https://www.mtecresults.com/runner/show?race=17889&rid=3811" target="_blank">run</a> a lot 🏃🏃🏃.
 
 I've been playing the violin since I was seven. Here's a picture of me performing the Sibelius Violin Concerto recently. 
-![alt text](../assets/violin.png)
-Someday I'll post actual videos of my performances.
+![alt text](../assets/violin2.png)
+Someday maybe I'll post actual videos of my performances.
 
 As one does in their 20s, I got into climbing. Here's me climbing outside for the first time when I was at <a href="https://boulderschool.yale.edu" target="_blank">the Boulder summer school</a> in 2023. 
 ![alt text](../assets/climbing.JPG)
