@@ -17,7 +17,7 @@ Here's a <a href="{{base.url}}/assets/adithyasriram_cv-4.pdf" target="_blank">CV
 ## Publications
 
 1. *Entanglement Oscillations from Many-Body Quantum Scars* <br>
-N. O'Dea* and **A. Sriram* **. <br>
+N. O'Dea* and __A. Sriram*__. <br>
 [<a href="https://arxiv.org/abs/2410.11822" target="_blank">arXiv (2024) </a>]
 
 1. *Non-Uniform Noise Rates and Griffiths Phases in Topological Quantum Error Correction.* <br>
