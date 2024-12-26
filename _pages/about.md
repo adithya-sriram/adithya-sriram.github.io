@@ -44,5 +44,33 @@ Lekkas, D. Brisson, A. T. C. Johnson. <br> [<a href="https://iopscience.iop.org/
 
 ## Misc.
 
-I think stat mech is super cool. Here's an Ising model close to its critical point.
+I like to  <a href="https://www.mtecresults.com/runner/show?race=17889&rid=3811" target="_blank">run</a> a lot 🏃🏃🏃.
+
+I've been playing the violin since I was seven. Here's a picture of me performing the Sibelius Violin Concerto recently. 
+![alt text](../assets/violin.png)
+Someday I'll post actual videos of my performances.
+
+As one does in their 20s, I got into climbing. Here's me climbing outside for the first time when I was at <a href="https://boulderschool.yale.edu" target="_blank">the Boulder summer school</a> in 2023. 
+![alt text](../assets/climbing.JPG)
+
+It's mostly a replacement for when I used to be a tennis player. 
+![alt text](../assets/tennis.JPG)
+
+二年間前に日本語の勉強を始めた。まだ上手になれなくても楽しかった。これは日本語の授業から書いた<a href="{{base.url}}/assets/日本仏教.pdf" target="_blank">日本仏教</a>論文です.絶対たくさん間違いがあるかもしれないけどたくさん間違いがあるかもしれないけど面白い宿題だった。
+
+I think stat mech is super cool. Here's an Ising model close to its critical point. There are clusters at all sizes!
 ![alt text](../assets/IsingT2_3.gif)
+
+
+Here's another fun animation I made.
+![alt text](../assets/spinsonlattice.gif)
+
+
+### My favorite papers
+
+Here are my favorite scientific papers. I'll add to this list as I see cool stuff!
+* <a href="https://arxiv.org/abs/quant-ph/0110143" target="_blank">Topological quantum memory</a>
+* <a href="https://arxiv.org/abs/1705.08975" target="_blank">Operator spreading in random unitary circuits</a>
+* <a href="https://www.sciencedirect.com/science/article/abs/pii/0003491687900923" target="_blank">Statistical mechanics of neural networks near saturation</a>
+* <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.51.6411" target="_blank">Critical behavior of random tranverse field Ising chains</a>
+
