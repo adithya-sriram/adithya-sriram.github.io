@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hiya! I'm Adithya, a PhD student in Physics at Stanford University advised by <a href="https://scholar.google.com/citations?user=xXBlOUYAAAAJ&hl=en" target="_blank">Vedika Khemani</a>. 
+Hiya! I'm Adithya, a PhD student in Physics at Stanford University advised by <a href="https://scholar.google.com/citations?user=xXBlOUYAAAAJ&hl=en" target="_blank">Vedika Khemani</a>. Before this, I did my undergrad in physics and chemical engineering at Penn.
 
 I'm really interested in statistical mechanics, randomness and applications of these ideas in classical and quantum error correction. I've recently thought a lot about <a href="https://arxiv.org/abs/2409.03325" target="_blank">applications specifically to topological quantum error correction</a>. Ideas from statistical mechanics and error correction also have a lot of relevance in machine learning and computation so I've recently begun exploring this area as well. 
 
@@ -40,3 +40,9 @@ E. V. Bostrom, **A. Sriram**, M. Claassen, A. Rubio. <br>
 Lekkas, D. Brisson, A. T. C. Johnson. <br> [<a href="https://iopscience.iop.org/article/10.1088/2053-1583/ab5dce" target="_blank">2D Materials (2020)</a>]
   
 1. *Attomolar detection of ss-DNA without amplification and capture of long target sequences with graphene biosensors.* <br> R. Vishnubhotla, **A. Sriram**, O. O. Dickens, S. V. Mandyam, J. Ping, E. Adu-Beng, A. T. C. Johnson. <br> [<a href="https://ieeexplore.ieee.org/ielaam/7361/9086908/8998161-aam.pdf" target="_blank">IEEE Sensors (2020)</a>]
+
+
+## Misc.
+
+I think stat mech is super cool. Here's an Ising model close to its critical point.
+![alt text](../assets/IsingT2_3.gif)
